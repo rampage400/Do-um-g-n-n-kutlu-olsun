@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Video Access</title>
+<style>
+  body {
+    font-family: sans-serif;
+    background: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .box {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 320px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+    text-align: center;
+  }
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    background: #4a90e2;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #357ac9;
+  }
+  .error {
+    color: red;
+    margin-top: 10px;
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="box">
+  <h3>Enter Password</h3>
+  <input id="pass" type="password" placeholder="رمز / Password" />
+  <button onclick="checkPass()">ورود / Enter</button>
+  <div id="err" class="error">رمز نادرست است / Incorrect password</div>
+</div>
+
+<script>
+function checkPass() {
+  var p = document.getElementById("pass").value.trim();
+  if (p === "1379") {
+    window.location.href = "video.mp4";
+  } else {
+    document.getElementById("err").style.display = "block";
+  }
+}
+</script>
+
+</body>
+</html>
