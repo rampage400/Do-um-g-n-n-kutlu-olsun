@@ -54,7 +54,7 @@
 <body>
 
 <div class="box">
-  <h3>Enter Password</h3>
+  <h3>رمز را وارد کنید / Enter Password</h3>
   <input id="pass" type="password" placeholder="رمز / Password" />
   <button onclick="checkPass()">ورود / Enter</button>
   <div id="err" class="error">رمز نادرست است / Incorrect password</div>
@@ -71,7 +71,7 @@ function checkPass() {
   var english = toEnglishNumber(p);
 
   if (english === "1379") {
-    window.location.href = "video.mp4";
+    window.location.href = "video.mp4"; // لینک ویدیو
   } else {
     document.getElementById("err").style.display = "block";
   }
