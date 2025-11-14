@@ -61,9 +61,16 @@
 </div>
 
 <script>
+// تبدیل اعداد فارسی به انگلیسی
+function toEnglishNumber(str) {
+  return str.replace(/[۰-۹]/g, d => "۰۱۲۳۴۵۶۷۸۹".indexOf(d));
+}
+
 function checkPass() {
   var p = document.getElementById("pass").value.trim();
-  if (p === "1379") {
+  var english = toEnglishNumber(p);
+
+  if (english === "1379") {
     window.location.href = "video.mp4";
   } else {
     document.getElementById("err").style.display = "block";
